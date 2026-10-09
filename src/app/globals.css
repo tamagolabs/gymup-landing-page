@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Oficial GymUp */
+  --color-gym-bg: #0b0e14;
+  --color-gym-card: #151a22;
+  --color-gym-surface: #202836;
+  --color-gym-primary: #00e676;
+  --color-gym-secondary: #8b5cf6;
+  --color-gym-gold: #ffd700;
+  --color-gym-border: #242c3d;
+  --color-gym-title: #ffffff;
+  --color-gym-text: #9cb0c9;
+
+  /* Aliases Semânticos */
+  --color-background-deep: #0b0e14;
+  --color-card-dark: #151a22;
+  --color-card-surface: #202836;
+  --color-neon-emerald: #00e676;
+  --color-cyber-violet: #8b5cf6;
+  --color-achievement-gold: #ffd700;
+  --color-border-subtle: #242c3d;
+  --color-text-title: #ffffff;
+  --color-text-body: #9cb0c9;
+
+  /* Tipografia Moderna */
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+:root {
+  --background: #0b0e14;
+  --foreground: #9cb0c9;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0e14;
+  color: #9cb0c9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #00e676;
+  color: #0b0e14;
+}
+
+/* Scrollbar Personalizada Dark Mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202836;
+  border-radius: 9999px;
+  border: 2px solid #0b0e14;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242c3d;
+}
+
+/* Efeitos Visuais & Micro-interações */
+.glow-primary {
+  box-shadow: 0 0 35px -5px rgba(0, 230, 118, 0.35);
+}
+
+.glow-primary-sm {
+  box-shadow: 0 0 16px -2px rgba(0, 230, 118, 0.4);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 35px -5px rgba(139, 92, 246, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(255, 215, 0, 0.35);
+}
+
+.text-glow-primary {
+  text-shadow: 0 0 20px rgba(0, 230, 118, 0.45);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.45);
+}
+
+/* Superfícies de Vidro (Glassmorphism Dark) */
+.glass-card {
+  background: rgba(21, 26, 34, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(36, 44, 61, 0.85);
+}
+
+.glass-surface {
+  background: rgba(32, 40, 54, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(36, 44, 61, 0.9);
+}
+
+/* Background Grids & Gradientes */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(36, 44, 61, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(36, 44, 61, 0.25) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 230, 118, 0.12) 0%,
+    rgba(139, 92, 246, 0.05) 35%,
+    transparent 70%
+  );
+}

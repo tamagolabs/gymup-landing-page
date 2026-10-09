@@ -1,0 +1,9 @@
+export { Comparison } from "./Comparison";
+export { CTA } from "./CTA";
+export { FAQ } from "./FAQ";
+export { Features } from "./Features";
+export { Footer } from "./Footer";
+export { Gamification } from "./Gamification";
+export { Hero } from "./Hero";
+export { Navbar } from "./Navbar";
+export { PhoneMockup } from "./PhoneMockup";
