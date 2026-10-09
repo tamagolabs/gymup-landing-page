@@ -35,9 +35,9 @@ export const SITE_CONFIG = {
     },
   ],
   navLinks: [
-    { label: "Recursos", href: "#features" },
-    { label: "Por que o GymUp?", href: "#comparison" },
-    { label: "Gamificação", href: "#gamification" },
+    { label: "Recursos", href: "#recursos" },
+    { label: "Gamificação", href: "#gamificacao" },
+    { label: "IA Gemini", href: "#ia" },
     { label: "FAQ", href: "#faq" },
   ],
 } as const;

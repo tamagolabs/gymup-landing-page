@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import {
-  ChevronRight,
-  Download,
+  Apple,
+  Play,
   ShieldCheck,
   Sparkles,
   Star,
@@ -30,60 +30,74 @@ export function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
-            {/* Tag Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gym-card/90 border border-gym-border/80 text-xs font-semibold mb-6 shadow-inner backdrop-blur-md">
+            {/* Tag/Pill no topo requerida */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gym-card/90 border border-gym-border/80 text-xs font-semibold mb-6 shadow-inner backdrop-blur-md">
               <span className="flex h-2 w-2 rounded-full bg-gym-primary animate-pulse" />
-              <span className="text-white font-mono">
-                100% OFFLINE (SQLITE)
-              </span>
-              <span className="text-gym-border font-light">|</span>
-              <span className="text-gym-secondary flex items-center gap-1 font-bold">
-                <Sparkles className="w-3.5 h-3.5" /> Google Gemini 2.5
+              <span className="text-white font-mono flex items-center gap-1.5">
+                ⚡ Powered by Google Gemini &amp; Arquitetura Local-First
               </span>
             </div>
 
-            {/* Headline Principal Magnética */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] mb-6">
-              Menos tela travada.{" "}
-              <span className="inline-block bg-linear-to-r from-gym-primary via-emerald-300 to-gym-secondary bg-clip-text text-transparent">
+            {/* Headline com gradiente sutil de branco para cinza claro e destaques em #00E676 */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] mb-6">
+              <span className="bg-linear-to-b from-white via-neutral-100 to-[#9CB0C9] bg-clip-text text-transparent">
+                Menos tela travada.
+              </span>{" "}
+              <span className="text-gym-primary drop-shadow-[0_0_24px_rgba(0,230,118,0.55)]">
                 Mais quilos na barra.
               </span>
             </h1>
 
             {/* Subtítulo de Alta Conversão */}
-            <p className="text-lg sm:text-xl text-gym-text max-w-2xl mb-8 leading-relaxed font-normal">
-              O primeiro aplicativo de musculação{" "}
-              <strong className="text-gym-primary font-medium">
-                local-first
-              </strong>{" "}
-              com inteligência preditiva do{" "}
-              <strong className="text-white font-medium">Google Gemini</strong>.
-              Registre séries sem internet em 0ms, receba sugestões automáticas
-              de sobrecarga (
-              <strong className="text-white font-medium">Smart Overload</strong>
-              ) e evolua de{" "}
-              <strong className="text-gym-gold font-medium">
-                Iniciante do Ferro a Lenda do Aço
-              </strong>
-              .
+            <p className="text-lg sm:text-xl text-gym-text max-w-2xl mb-9 leading-relaxed font-normal">
+              O primeiro app de musculação que roda em{" "}
+              <strong className="text-white">60 FPS cravados</strong> com banco
+              local SQLite. Registre suas séries em{" "}
+              <strong className="text-gym-primary font-medium">0ms</strong> no
+              subsolo da academia, evolua com{" "}
+              <strong className="text-white font-medium">Smart Overload</strong>{" "}
+              e conquiste seu físico de elite.
             </p>
 
-            {/* CTAs de Download */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10">
+            {/* Botões Duplos de Download (Android & iOS) */}
+            <div
+              className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10"
+              id="download-cta"
+            >
+              {/* Botão Android */}
               <a
-                href="#download"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-gym-bg bg-gym-primary rounded-2xl shadow-[0_0_30px_rgba(0,230,118,0.35)] hover:shadow-[0_0_45px_rgba(0,230,118,0.55)] hover:bg-[#00c864] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                href={SITE_CONFIG.links.playStore}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm font-extrabold text-[#0B0E14] bg-gym-primary rounded-2xl shadow-[0_0_25px_rgba(0,230,118,0.45)] hover:shadow-[0_0_40px_rgba(0,230,118,0.7)] hover:bg-[#00f880] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
               >
-                <Download className="w-5 h-5 stroke-[2.5]" />
-                <span>Baixar Grátis no Celular</span>
+                <Play className="w-5 h-5 fill-[#0B0E14] group-hover:scale-110 transition-transform" />
+                <div className="text-left leading-tight">
+                  <span className="text-[10px] uppercase font-bold tracking-wider block opacity-90">
+                    Disponível no
+                  </span>
+                  <span className="text-sm font-black block">
+                    Baixar para Android
+                  </span>
+                </div>
               </a>
 
+              {/* Botão iOS */}
               <a
-                href="#features"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold text-white bg-gym-card/80 border border-gym-border/90 rounded-2xl hover:bg-gym-surface hover:border-gym-primary/40 transition-all duration-200 backdrop-blur-md"
+                href={SITE_CONFIG.links.appStore}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm font-bold text-white bg-gym-card/90 border border-gym-border/90 rounded-2xl hover:bg-gym-surface hover:border-gym-primary/50 transition-all duration-200 backdrop-blur-md group hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span>Conhecer Recursos</span>
-                <ChevronRight className="w-4 h-4 text-gym-primary" />
+                <Apple className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+                <div className="text-left leading-tight">
+                  <span className="text-[10px] uppercase font-semibold text-gym-text tracking-wider block">
+                    Disponível na
+                  </span>
+                  <span className="text-sm font-extrabold block">
+                    Baixar para iOS
+                  </span>
+                </div>
               </a>
             </div>
 
@@ -104,17 +118,17 @@ export function Hero() {
 
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-gym-primary" />
-                <span>Zero Anúncios • Sem Cadastro Obrigatório</span>
+                <span>Zero Anúncios • Sem Login Obrigatório</span>
               </div>
 
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4 text-gym-gold" />
-                <span>Execução Fluida em 60 FPS</span>
+                <span>Latência de 0ms</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Coluna do Mockup & Cards Flutuantes */}
+          {/* Coluna do Mockup do Smartphone 3D/CSS */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -138,7 +152,7 @@ export function Hero() {
                   Smart Overload
                 </p>
                 <p className="text-xs font-bold text-white">
-                  +2.5kg sugerido no Supino
+                  +2kg sugerido no Supino
                 </p>
               </div>
             </motion.div>
@@ -159,10 +173,10 @@ export function Hero() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] uppercase font-bold text-gym-gold tracking-wider">
-                  Level Up!
+                  Gamificação
                 </p>
                 <p className="text-xs font-bold text-white">
-                  Lenda do Aço alcançado 🔥
+                  +150 XP • Nível 14
                 </p>
               </div>
             </motion.div>

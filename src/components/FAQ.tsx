@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import { type FAQItem, FAQS } from "@/data/faq";
@@ -16,45 +17,45 @@ export function FAQ() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gym-card border border-gym-border text-xs font-semibold text-gym-primary mb-4 font-mono">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gym-card border border-gym-border text-xs font-semibold text-gym-primary mb-4 font-mono">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>DÚVIDAS FREQUENTES</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            Perguntas & Respostas
+            Perguntas &amp; Respostas
           </h2>
           <p className="text-base sm:text-lg text-gym-text">
-            Tudo o que você precisa saber sobre funcionamento offline, IA Gemini
-            e segurança de dados.
+            Tudo o que você precisa saber sobre funcionamento 100% offline, IA
+            Gemini e segurança de dados.
           </p>
         </div>
 
-        {/* Accordion List */}
+        {/* Accordion List com AnimatePresence e Framer Motion */}
         <div className="space-y-4">
           {FAQS.map((item: FAQItem, index: number) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={item.question}
-                className={`rounded-2xl transition-all duration-200 border ${
+                className={`rounded-2xl transition-all duration-300 border overflow-hidden ${
                   isOpen
-                    ? "bg-gym-card border-gym-primary/40 shadow-lg shadow-black/40"
-                    : "bg-gym-card/70 border-gym-border hover:border-gym-border/80"
+                    ? "bg-gym-card border-gym-primary/50 shadow-xl shadow-black/50"
+                    : "bg-gym-card/70 border-gym-border hover:border-gym-border/90"
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold text-white">
+                  <span className="text-base sm:text-lg font-bold text-white leading-snug">
                     {item.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 border transition-transform duration-200 ${
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border transition-transform duration-300 ${
                       isOpen
-                        ? "bg-gym-primary/10 border-gym-primary/40 text-gym-primary rotate-180"
+                        ? "bg-gym-primary/15 border-gym-primary/40 text-gym-primary rotate-180 shadow-[0_0_12px_rgba(0,230,118,0.3)]"
                         : "bg-gym-surface border-gym-border text-gym-text"
                     }`}
                   >
@@ -62,11 +63,20 @@ export function FAQ() {
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-gym-text leading-relaxed border-t border-gym-border/40 mt-1">
-                    {item.answer}
-                  </div>
-                )}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="px-5 sm:px-6 pb-6 pt-2 text-sm sm:text-base text-gym-text leading-relaxed border-t border-gym-border/40">
+                        {item.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
