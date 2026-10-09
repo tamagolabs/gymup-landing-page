@@ -25,7 +25,7 @@ export const SITE_CONFIG = {
     },
     {
       label: "IA Preditiva",
-      value: "Gemini 2.5",
+      value: "Gemini 3.8",
       change: "Ajuste de dores e volume",
     },
     {

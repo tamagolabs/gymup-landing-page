@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,6 +22,7 @@ export const viewport: Viewport = {
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
 };
 
 export const metadata: Metadata = {
@@ -33,6 +36,7 @@ export const metadata: Metadata = {
     "musculação",
     "app de treino",
     "local-first",
+    "SQLite fitness app",
     "gamificação",
     "Google Gemini",
     "treino de força",
@@ -40,11 +44,15 @@ export const metadata: Metadata = {
     "hipertrofia",
     "academia offline",
     "registro de treinos",
+    "Smart Overload",
     "1RM",
   ],
-  authors: [{ name: SITE_CONFIG.author }],
+  authors: [{ name: SITE_CONFIG.author, url: SITE_CONFIG.url }],
   creator: SITE_CONFIG.name,
   publisher: SITE_CONFIG.name,
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
   robots: {
     index: true,
     follow: true,
@@ -70,8 +78,15 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     creator: "@gymupapp",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "GymUp",
+  },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
@@ -87,6 +102,8 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-gym-bg text-gym-text flex flex-col selection:bg-gym-primary selection:text-gym-bg">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
