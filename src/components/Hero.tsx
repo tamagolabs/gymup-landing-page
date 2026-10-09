@@ -33,32 +33,39 @@ export function Hero() {
             {/* Tag Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gym-card/90 border border-gym-border/80 text-xs font-semibold mb-6 shadow-inner backdrop-blur-md">
               <span className="flex h-2 w-2 rounded-full bg-gym-primary animate-pulse" />
-              <span className="text-white font-mono">NOVA GERAÇÃO</span>
+              <span className="text-white font-mono">
+                100% OFFLINE (SQLITE)
+              </span>
               <span className="text-gym-border font-light">|</span>
               <span className="text-gym-secondary flex items-center gap-1 font-bold">
-                <Sparkles className="w-3.5 h-3.5" /> Google Gemini IA
+                <Sparkles className="w-3.5 h-3.5" /> Google Gemini 2.5
               </span>
             </div>
 
-            {/* Headline Principal */}
+            {/* Headline Principal Magnética */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] mb-6">
-              Treine Mais Inteligente.{" "}
+              Menos tela travada.{" "}
               <span className="inline-block bg-linear-to-r from-gym-primary via-emerald-300 to-gym-secondary bg-clip-text text-transparent">
-                Suba de Nível.
+                Mais quilos na barra.
               </span>
             </h1>
 
             {/* Subtítulo de Alta Conversão */}
             <p className="text-lg sm:text-xl text-gym-text max-w-2xl mb-8 leading-relaxed font-normal">
-              O aplicativo de musculação definitivo: inteligência preditiva do{" "}
-              <strong className="text-white font-medium">Google Gemini</strong>,
-              mecânica gamificada de{" "}
-              <strong className="text-gym-gold font-medium">RPG & XP</strong> e
-              arquitetura{" "}
+              O primeiro aplicativo de musculação{" "}
               <strong className="text-gym-primary font-medium">
-                100% local-first
+                local-first
               </strong>{" "}
-              com zero latência.
+              com inteligência preditiva do{" "}
+              <strong className="text-white font-medium">Google Gemini</strong>.
+              Registre séries sem internet em 0ms, receba sugestões automáticas
+              de sobrecarga (
+              <strong className="text-white font-medium">Smart Overload</strong>
+              ) e evolua de{" "}
+              <strong className="text-gym-gold font-medium">
+                Iniciante do Ferro a Lenda do Aço
+              </strong>
+              .
             </p>
 
             {/* CTAs de Download */}
@@ -68,19 +75,19 @@ export function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-gym-bg bg-gym-primary rounded-2xl shadow-[0_0_30px_rgba(0,230,118,0.35)] hover:shadow-[0_0_45px_rgba(0,230,118,0.55)] hover:bg-[#00c864] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
                 <Download className="w-5 h-5 stroke-[2.5]" />
-                <span>Começar Treino Grátis</span>
+                <span>Baixar Grátis no Celular</span>
               </a>
 
               <a
                 href="#features"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold text-white bg-gym-card/80 border border-gym-border/90 rounded-2xl hover:bg-gym-surface hover:border-gym-primary/40 transition-all duration-200 backdrop-blur-md"
               >
-                <span>Explorar Recursos</span>
+                <span>Conhecer Recursos</span>
                 <ChevronRight className="w-4 h-4 text-gym-primary" />
               </a>
             </div>
 
-            {/* Trust Badges & Avaliações */}
+            {/* Badges de Prova Social */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6 border-t border-gym-border/60 text-xs text-gym-text">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1">
@@ -92,17 +99,17 @@ export function Hero() {
                   ))}
                 </div>
                 <span className="font-bold text-white">4.9/5</span>
-                <span>(3.2k+ avaliações)</span>
+                <span>(+3.500 avaliações)</span>
               </div>
 
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-gym-primary" />
-                <span>Zero Anúncios • 100% Offline</span>
+                <span>Zero Anúncios • Sem Cadastro Obrigatório</span>
               </div>
 
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4 text-gym-gold" />
-                <span>Respostas em 0ms</span>
+                <span>Execução Fluida em 60 FPS</span>
               </div>
             </div>
           </motion.div>
@@ -128,10 +135,10 @@ export function Hero() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] uppercase font-bold text-gym-secondary tracking-wider">
-                  IA em Ação
+                  Smart Overload
                 </p>
                 <p className="text-xs font-bold text-white">
-                  +10% Sobrecarga Sugerida
+                  +2.5kg sugerido no Supino
                 </p>
               </div>
             </motion.div>
@@ -152,10 +159,10 @@ export function Hero() {
               </div>
               <div className="text-left">
                 <p className="text-[10px] uppercase font-bold text-gym-gold tracking-wider">
-                  Novo Recorde
+                  Level Up!
                 </p>
                 <p className="text-xs font-bold text-white">
-                  100kg Supino Conquistado!
+                  Lenda do Aço alcançado 🔥
                 </p>
               </div>
             </motion.div>

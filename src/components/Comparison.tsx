@@ -16,12 +16,12 @@ export function Comparison() {
             <span>{"// RAIO-X COMPARATIVO"}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            Por que o GymUp Supera os Apps Tradicionais?
+            Por Que Não Usamos Apps Tradicionais?
           </h2>
           <p className="text-base sm:text-lg text-gym-text">
-            Veja a comparação direta contra os rastreadores de treino antigos
-            que dependem de nuvem lenta e cobram assinaturas abusivas por
-            funções básicas.
+            A maioria dos aplicativos de academia parou no tempo: pesados,
+            lotados de anúncios invasivos na versão grátis e dependentes de uma
+            nuvem lenta que não abre no subsolo da academia.
           </p>
         </div>
 

@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
   name: "GymUp",
-  tagline: "Treine Mais Inteligente. Suba de Nível.",
+  tagline: "Menos tela travada. Mais quilos na barra.",
   description:
-    "O aplicativo de musculação definitivo: gamificado, movido a IA Google Gemini e 100% local-first. Registre treinos sem internet, conquiste XP e evolua suas cargas com precisão cirúrgica.",
+    "O aplicativo de musculação definitivo: 100% offline (Local-First com SQLite), inteligente com Google Gemini e ultrarrápido em 60 FPS. Registre treinos em 0ms, evolua com Smart Overload e suba de nível de Iniciante do Ferro a Lenda do Aço.",
   url: "https://gymup.app",
   author: "GymUp Team",
   links: {
@@ -13,27 +13,31 @@ export const SITE_CONFIG = {
     twitter: "https://twitter.com",
   },
   stats: [
-    { label: "Usuários Ativos", value: "45K+", change: "+120% este mês" },
     {
-      label: "Treinos Registrados",
-      value: "1.2M+",
-      change: "Sem perda de dados",
-    },
-    {
-      label: "Precisão do Gemini IA",
-      value: "99.4%",
-      change: "Ajustes em tempo real",
-    },
-    {
-      label: "Tempo de Resposta Offline",
+      label: "Latência na Academia",
       value: "0ms",
-      change: "100% Local-First",
+      change: "100% Offline (SQLite)",
+    },
+    {
+      label: "Taxa de Atualização",
+      value: "60 FPS",
+      change: "Interface ultrarrápida",
+    },
+    {
+      label: "IA Preditiva",
+      value: "Gemini 2.5",
+      change: "Ajuste de dores e volume",
+    },
+    {
+      label: "Privacidade de Dados",
+      value: "100% Local",
+      change: "Sem login forçado",
     },
   ],
   navLinks: [
     { label: "Recursos", href: "#features" },
+    { label: "Por que o GymUp?", href: "#comparison" },
     { label: "Gamificação", href: "#gamification" },
-    { label: "Comparativo", href: "#comparison" },
     { label: "FAQ", href: "#faq" },
   ],
 } as const;

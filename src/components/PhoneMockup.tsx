@@ -119,17 +119,23 @@ export function PhoneMockup() {
               </div>
             </div>
 
-            {/* Descanso Timer */}
+            {/* Descanso Timer com +15s / -15s */}
             <div className="flex items-center justify-between pt-2 border-t border-gym-border/40 text-xs">
               <div className="flex items-center gap-1.5 text-gym-text">
                 <Clock className="w-3.5 h-3.5 text-gym-primary" />
-                <span>Descanso:</span>
-              </div>
-              <div className="flex items-center gap-1.5">
+                <span>Timer:</span>
                 <span className="font-mono font-bold text-white text-xs">
                   01:24
                 </span>
-                <span className="w-2 h-2 rounded-full bg-gym-primary animate-ping" />
+              </div>
+              <div className="flex items-center gap-1.5 font-mono text-[10px]">
+                <span className="px-1.5 py-0.5 rounded bg-gym-surface border border-gym-border text-gym-text">
+                  -15s
+                </span>
+                <span className="px-1.5 py-0.5 rounded bg-gym-primary/10 border border-gym-primary/30 text-gym-primary font-bold">
+                  +15s
+                </span>
+                <span className="w-2 h-2 rounded-full bg-gym-primary animate-ping ml-0.5" />
               </div>
             </div>
           </div>

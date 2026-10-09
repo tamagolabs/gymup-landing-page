@@ -31,14 +31,14 @@ export function CTA() {
 
             {/* Headline */}
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
-              Pronto Para Transformar Seu Físico e Suas Cargas?
+              Pronto Para Treinar Sem Travamentos e Subir de Nível?
             </h2>
 
             {/* Subtítulo */}
             <p className="text-base sm:text-xl text-gym-text leading-relaxed mb-10 max-w-2xl mx-auto">
-              Junte-se a mais de 45.000 praticantes de musculação que
-              abandonaram a lentidão dos apps comuns. Baixe o GymUp e sinta a
-              diferença no primeiro treino.
+              Junte-se a quem leva a sério cada quilo levantado. Baixe o GymUp
+              gratuitamente: 100% offline com SQLite, alimentado por Google
+              Gemini e com latência de 0ms.
             </p>
 
             {/* Botões de Download */}

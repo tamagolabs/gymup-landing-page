@@ -7,40 +7,41 @@ export interface ComparisonFeature {
 
 export const COMPARISON_DATA: ComparisonFeature[] = [
   {
-    name: "Arquitetura Local-First (0ms de latência)",
+    name: "Funciona 100% offline no subsolo sem sinal (SQLite Local-First)",
     gymUp: true,
     others: false,
     highlight: true,
   },
   {
-    name: "IA Preditiva Integrada (Google Gemini)",
+    name: "Fichas adaptadas a dores e articulações via Google Gemini",
     gymUp: true,
     others: false,
     highlight: true,
   },
   {
-    name: "Sistema de Gamificação e XP de Força",
+    name: "Smart Overload: sugestão de aumento de carga em 1 toque",
     gymUp: true,
-    others: "Básico",
+    others: false,
     highlight: true,
   },
   {
-    name: "Funciona 100% offline no subsolo da academia",
+    name: "Interface ultrarrápida a 60 FPS com timer (+15s / -15s)",
     gymUp: true,
-    others: "Instável",
+    others: "Lenta e travada",
+    highlight: true,
   },
   {
-    name: "Registro e duplicação de séries em 1 toque",
+    name: "Gamificação real: de Iniciante do Ferro a Lenda do Aço",
     gymUp: true,
-    others: true,
+    others: "Apenas listas frias",
   },
   {
-    name: "Sem limites artificiais de rotinas salvas no plano grátis",
+    name: "Uso imediato sem obrigação de cadastro em nuvem",
     gymUp: true,
     others: false,
   },
   {
-    name: "Exportação livre de dados em formato aberto",
+    name: "Sem anúncios em tela cheia no meio do seu treino",
     gymUp: true,
     others: false,
   },
