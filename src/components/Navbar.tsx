@@ -26,13 +26,10 @@ export function Navbar() {
                     Up
                   </span>
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-gym-primary/10 text-gym-primary border border-gym-primary/30 font-bold uppercase tracking-wider hidden sm:inline-block">
-                  v2.5
-                </span>
               </div>
               <span className="text-[11px] font-mono text-gym-text -mt-1 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-gym-primary animate-pulse" />
-                Local-First • Gemini IA
+                Local-First • Gemini 3.8
               </span>
             </div>
           </Link>

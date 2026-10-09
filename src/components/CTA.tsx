@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Apple,
-  CheckCircle2,
-  Download,
-  Play,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { Apple, CheckCircle2, Play, ShieldCheck, Sparkles } from "lucide-react";
 import { SITE_CONFIG } from "@/data/constants";
 
 export function CTA() {
@@ -26,7 +19,7 @@ export function CTA() {
             {/* Tag */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gym-surface border border-gym-primary/40 text-xs font-semibold text-gym-primary mb-6 font-mono">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>DISPONÍVEL AGORA • IOS & ANDROID</span>
+              <span>DISPONÍVEL PARA ANDROID • IOS EM BREVE</span>
             </div>
 
             {/* Headline */}
@@ -37,52 +30,43 @@ export function CTA() {
             {/* Subtítulo */}
             <p className="text-base sm:text-xl text-gym-text leading-relaxed mb-10 max-w-2xl mx-auto">
               Junte-se a quem leva a sério cada quilo levantado. Baixe o GymUp
-              gratuitamente: 100% offline com SQLite, alimentado por Google
-              Gemini e com latência de 0ms.
+              gratuitamente para Android: 100% offline com SQLite, alimentado
+              por Google Gemini e com latência de 0ms.
             </p>
 
             {/* Botões de Download */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-              {/* Apple Store Button */}
-              <a
-                href={SITE_CONFIG.links.appStore}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gym-surface border border-gym-border text-white hover:border-gym-primary/60 hover:bg-gym-card transition-all duration-200 group"
-              >
-                <Apple className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
-                <div className="text-left">
-                  <p className="text-[10px] uppercase tracking-wider text-gym-text">
-                    Baixar na
-                  </p>
-                  <p className="text-sm font-bold text-white">App Store</p>
-                </div>
-              </a>
-
-              {/* Google Play Store Button */}
+              {/* Google Play Store Button (Ativo) */}
               <a
                 href={SITE_CONFIG.links.playStore}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gym-surface border border-gym-border text-white hover:border-gym-primary/60 hover:bg-gym-card transition-all duration-200 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-gym-primary text-[#0B0E14] font-black text-sm shadow-[0_0_25px_rgba(0,230,118,0.45)] hover:shadow-[0_0_40px_rgba(0,230,118,0.7)] hover:bg-[#00f880] hover:scale-105 active:scale-95 transition-all duration-200 group"
               >
-                <Play className="w-7 h-7 text-gym-primary fill-gym-primary group-hover:scale-110 transition-transform" />
-                <div className="text-left">
-                  <p className="text-[10px] uppercase tracking-wider text-gym-text">
-                    Disponível no
+                <Play className="w-6 h-6 fill-[#0B0E14] group-hover:scale-110 transition-transform" />
+                <div className="text-left leading-tight">
+                  <p className="text-[10px] uppercase tracking-wider font-bold opacity-90">
+                    Baixar para Android
                   </p>
-                  <p className="text-sm font-bold text-white">Google Play</p>
+                  <p className="text-sm font-black">Google Play</p>
                 </div>
               </a>
 
-              {/* Botão Direto Web / APK */}
-              <a
-                href="#download"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gym-primary text-gym-bg font-bold text-sm shadow-[0_0_25px_rgba(0,230,118,0.4)] hover:bg-[#00c864] hover:scale-105 active:scale-95 transition-all duration-200"
-              >
-                <Download className="w-5 h-5 stroke-[2.5]" />
-                <span>Instalação Rápida</span>
-              </a>
+              {/* Apple Store Button (Em Breve) */}
+              <div className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gym-card/60 border border-gym-border/70 text-gym-text/80 cursor-default select-none backdrop-blur-md">
+                <Apple className="w-6 h-6 text-gym-text/60" />
+                <div className="text-left leading-tight">
+                  <p className="text-[10px] uppercase tracking-wider text-gym-text/60 font-semibold">
+                    Apple iOS
+                  </p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-sm font-bold text-white/80">App Store</p>
+                    <span className="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded-full bg-gym-surface text-gym-primary border border-gym-primary/30">
+                      Em breve
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Garantias */}

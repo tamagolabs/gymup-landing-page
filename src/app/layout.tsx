@@ -76,7 +76,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`,
     description: SITE_CONFIG.description,
-    creator: "@gymupapp",
   },
   appleWebApp: {
     capable: true,

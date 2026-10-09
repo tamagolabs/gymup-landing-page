@@ -6,11 +6,7 @@ export const SITE_CONFIG = {
   url: "https://gymup.app",
   author: "GymUp Team",
   links: {
-    appStore: "https://apps.apple.com",
     playStore: "https://play.google.com",
-    github: "https://github.com",
-    discord: "https://discord.gg",
-    twitter: "https://twitter.com",
   },
   stats: [
     {

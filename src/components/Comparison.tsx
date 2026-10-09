@@ -13,7 +13,8 @@ export function Comparison() {
         {/* Header da Seção */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gym-card border border-gym-border text-xs font-semibold text-gym-primary mb-4 font-mono">
-            <span>{"// RAIO-X COMPARATIVO"}</span>
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>COMPARATIVO DIRETO</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
             Por Que Não Usamos Apps Tradicionais?

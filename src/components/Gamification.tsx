@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import {
-  Award,
+  CheckCircle2,
   Crown,
+  Dumbbell,
   Flame,
   Plus,
-  Shield,
-  Sparkles,
+  TrendingUp,
   Trophy,
   Zap,
 } from "lucide-react";
@@ -27,54 +27,61 @@ export function Gamification() {
     }
   };
 
+  // Conquistas fiéis a src/constants/achievements.ts do App Real
   const badges = [
     {
       title: "Primeiro Passo",
-      category: "Primeiro Treino Registrado",
-      xp: "+200 XP",
-      icon: Shield,
-      glow: "border-gym-primary/60 text-gym-primary bg-gym-primary/10 shadow-[0_0_20px_rgba(0,230,118,0.25)]",
-      metallic: "bg-gradient-to-br from-emerald-400/20 to-transparent",
+      category: "1º treino completo no GymUp",
+      xp: "+100 XP",
+      icon: Trophy,
+      glow: "border-[#FFD700]/50 text-[#FFD700] bg-[#FFD700]/10",
+      metallic: "border-[#FFD700]/40",
+      unlocked: true,
     },
     {
-      title: "10.000 kg Movidos",
-      category: "Tonelagem de Força Bruta",
-      xp: "+800 XP",
-      icon: Zap,
-      glow: "border-gym-secondary/60 text-gym-secondary bg-gym-secondary/10 shadow-[0_0_20px_rgba(139,92,246,0.25)]",
-      metallic: "bg-gradient-to-br from-violet-400/20 to-transparent",
-    },
-    {
-      title: "Streak de 30 Dias",
-      category: "Disciplina Inabalável",
-      xp: "+1,500 XP",
+      title: "Ritmo Blindado",
+      category: "25 treinos concluídos com sucesso",
+      xp: "+500 XP",
       icon: Flame,
-      glow: "border-orange-500/60 text-orange-400 bg-orange-500/10 shadow-[0_0_20px_rgba(249,115,22,0.25)]",
-      metallic: "bg-gradient-to-br from-orange-400/20 to-transparent",
+      glow: "border-[#FF7043]/50 text-[#FF7043] bg-[#FF7043]/10",
+      metallic: "border-[#FF7043]/40",
+      unlocked: true,
     },
     {
-      title: "Clube dos 100kg",
-      category: "Supino Reto com 3 Dígitos",
-      xp: "+1,000 XP",
+      title: "Hábito Inquebrável",
+      category: "Streak de 30 dias sem quebrar",
+      xp: "+1.000 XP",
+      icon: Zap,
+      glow: "border-gym-primary/50 text-gym-primary bg-gym-primary/10",
+      metallic: "border-gym-primary/40",
+      unlocked: true,
+    },
+    {
+      title: "10 Toneladas",
+      category: "Ergueu mais de 10.000 kg acumulados",
+      xp: "+800 XP",
+      icon: Dumbbell,
+      glow: "border-gym-secondary/50 text-gym-secondary bg-gym-secondary/10",
+      metallic: "border-gym-secondary/40",
+      unlocked: true,
+    },
+    {
+      title: "Centésimo Treino",
+      category: "Marca épica de 100 treinos concluídos",
+      xp: "+2.500 XP",
       icon: Crown,
-      glow: "border-gym-gold/60 text-gym-gold bg-gym-gold/10 shadow-[0_0_20px_rgba(255,215,0,0.3)]",
-      metallic: "bg-gradient-to-br from-yellow-400/20 to-transparent",
+      glow: "border-[#FFD700]/50 text-[#FFD700] bg-[#FFD700]/10",
+      metallic: "border-[#FFD700]/40",
+      unlocked: true,
     },
     {
-      title: "Muralha de Pernas",
-      category: "Leg Day Completo Sem Pular Séries",
-      xp: "+600 XP",
-      icon: Award,
-      glow: "border-cyan-500/60 text-cyan-400 bg-cyan-500/10 shadow-[0_0_20px_rgba(6,182,212,0.25)]",
-      metallic: "bg-gradient-to-br from-cyan-400/20 to-transparent",
-    },
-    {
-      title: "Smart Overload 4x",
-      category: "4 Semanas Seguidas Aumentando Carga",
-      xp: "+1,200 XP",
-      icon: Sparkles,
-      glow: "border-gym-primary/60 text-gym-primary bg-gym-primary/10 shadow-[0_0_20px_rgba(0,230,118,0.25)]",
-      metallic: "bg-gradient-to-br from-emerald-400/20 to-transparent",
+      title: "Mestre da Sobrecarga",
+      category: "10 semanas progredindo carga",
+      xp: "+1.200 XP",
+      icon: TrendingUp,
+      glow: "border-gym-primary/50 text-gym-primary bg-gym-primary/10",
+      metallic: "border-gym-primary/40",
+      unlocked: true,
     },
   ];
 
@@ -105,24 +112,24 @@ export function Gamification() {
             </h2>
 
             <p className="text-base sm:text-lg text-gym-text leading-relaxed mb-8">
-              Chega de interfaces monótonas parecidas com planilhas de trabalho.
-              No GymUp, cada série pesada concluída e cada tonelada acumulada
-              rendem pontos de experiência (XP). Suba de nível, desbloqueie
-              medalhas com brilho metálico e honre sua constância.
+              Chega de interfaces monótonas que parecem planilhas de trabalho.
+              No GymUp, cada série pesada anotada e cada tonelada erguida rendem
+              pontos de experiência reais calculados por fórmula biomecânica.
+              Suba de nível e colecione medalhas no seu perfil.
             </p>
 
             <div className="space-y-3.5">
               <div className="flex items-start gap-4 p-4 rounded-2xl bg-gym-card border border-gym-border hover:border-gym-gold/30 transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-gym-gold/15 flex items-center justify-center text-gym-gold shrink-0 border border-gym-gold/30">
-                  <Flame className="w-5 h-5" />
+                  <Flame className="w-5 h-5 text-[#FF7043]" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">
-                    Streaks Blindados
+                    Streaks Blindados (Disciplina Real)
                   </h4>
                   <p className="text-xs text-gym-text mt-0.5">
-                    Dias de descanso programado não quebram sua sequência. Sua
-                    consistência é recompensada sem estimular lesões.
+                    Dias de descanso programado respeitam sua recuperação e não
+                    quebram sua sequência de treinos.
                   </p>
                 </div>
               </div>
@@ -136,15 +143,16 @@ export function Gamification() {
                     XP por Tonelagem Erguida
                   </h4>
                   <p className="text-xs text-gym-text mt-0.5">
-                    Carga multiplicada por repetições: visualize o peso total
-                    erguido correspondente a carros ou monumentos históricos.
+                    Cargas multiplicadas por repetições calculam seu volume
+                    acumulado em toneladas para você visualizar a força bruta
+                    construída.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Lado Direito: Widget Interativo com Barra de Nível e Grade de Badges */}
+          {/* Lado Direito: Widget Interativo Fiel ao App Real */}
           <div className="lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
@@ -156,27 +164,27 @@ export function Gamification() {
               {/* Efeito Glow Dourado */}
               <div className="absolute top-0 right-0 w-48 h-48 bg-gym-gold/10 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Status do Jogador / Atleta */}
+              {/* Status do Atleta Fiel ao XpHeader.tsx e Perfil do App */}
               <div className="flex items-center justify-between pb-6 border-b border-gym-border/60">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-2xl bg-linear-to-tr from-gym-gold via-amber-400 to-yellow-200 p-0.5 shadow-lg shadow-gym-gold/25">
                     <div className="w-full h-full bg-[#151A22] rounded-[14px] flex items-center justify-center text-gym-gold">
-                      <Trophy className="w-8 h-8" />
+                      <Trophy className="w-8 h-8 text-[#FFD700]" />
                     </div>
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono font-bold text-gym-gold uppercase tracking-wider">
-                        Rank Veterano
+                      <span className="text-xs font-mono font-bold text-[#FFD700] uppercase tracking-wider">
+                        NÍVEL 14 • PRO
                       </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-gym-surface text-white border border-gym-border font-bold">
-                        Top 5%
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#202836] text-[#FF7043] border border-[#242C3D] font-bold flex items-center gap-1">
+                        <Flame className="w-3 h-3 fill-[#FF7043]" /> 18 treinos
                       </span>
                     </div>
                     <h3 className="text-xl font-black text-white mt-0.5">
                       {isLevelUp
-                        ? "Nível 15 — Mestre da Forja"
-                        : "Nível 14 — Titã do Ferro"}
+                        ? "Nível 15 — Mestre da Hipertrofia"
+                        : "Nível 14 — Mestre da Hipertrofia"}
                     </h3>
                   </div>
                 </div>
@@ -189,7 +197,7 @@ export function Gamification() {
                 </div>
               </div>
 
-              {/* Barra de Nível Interativa (Requisito: Nível 14 - Titã do Ferro, 1.850 / 2.000 XP) */}
+              {/* Barra de Nível Fiel ao XpHeader.tsx */}
               <div className="py-6 border-b border-gym-border/60">
                 <div className="flex items-center justify-between text-xs font-mono mb-2">
                   <span className="text-gym-text">
@@ -201,24 +209,24 @@ export function Gamification() {
                   </span>
                 </div>
 
-                <div className="w-full h-4 bg-gym-surface rounded-full overflow-hidden p-0.5 border border-gym-border relative">
+                <div className="w-full h-3.5 bg-[#0B0E14] rounded-full overflow-hidden p-0.5 border border-gym-border relative">
                   <motion.div
-                    className="h-full bg-linear-to-r from-gym-primary via-emerald-400 to-gym-gold rounded-full shadow-[0_0_12px_rgba(0,230,118,0.6)] transition-all duration-300"
+                    className="h-full bg-linear-to-r from-gym-primary via-emerald-400 to-[#FFD700] rounded-full shadow-[0_0_12px_rgba(0,230,118,0.6)] transition-all duration-300"
                     style={{ width: `${Math.min(xpPercentage, 100)}%` }}
                   />
                 </div>
 
-                {/* Botão Interativo para testar o ganho de XP */}
+                {/* Botão Interativo para testar ganho de XP */}
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-[11px] text-gym-text font-mono">
                     {isLevelUp
-                      ? "🔥 LEVEL UP ALCANÇADO!"
+                      ? "🔥 LEVEL UP! Próximo título: Colosso dos Treinos"
                       : "Faltam apenas 150 XP para upar!"}
                   </span>
                   <button
                     type="button"
                     onClick={handleAddXp}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gym-gold/15 border border-gym-gold/40 text-gym-gold hover:bg-gym-gold/25 text-xs font-bold font-mono transition-all active:scale-95 shadow-sm"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gym-gold/15 border border-gym-gold/40 text-gym-gold hover:bg-gym-gold/25 text-xs font-bold font-mono transition-all active:scale-95 shadow-xs"
                   >
                     <Plus className="w-3.5 h-3.5 stroke-3" />
                     <span>
@@ -228,34 +236,46 @@ export function Gamification() {
                 </div>
               </div>
 
-              {/* Grade de Badges com Brilho Metálico / Neon */}
+              {/* Grade de Badges Fiel ao AchievementsGrid.tsx do App Real */}
               <div className="pt-6">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-gym-text mb-4">
-                  {"// Badges com Brilho Metálico & Neon"}
-                </h4>
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-xs font-mono uppercase tracking-wider text-gym-text flex items-center gap-1.5">
+                    <Trophy className="w-3.5 h-3.5 text-[#FFD700]" /> Conquistas
+                    &amp; Badges Desbloqueadas
+                  </h4>
+                  <span className="text-xs font-mono font-bold text-[#FFD700]">
+                    6/28
+                  </span>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {badges.map((badge) => {
                     const Icon = badge.icon;
                     return (
                       <div
                         key={badge.title}
-                        className={`p-3 rounded-2xl bg-gym-surface/60 border border-gym-border flex items-center gap-3 transition-all duration-200 hover:-translate-y-0.5 ${badge.metallic}`}
+                        className={`p-3 rounded-2xl bg-[#151A22] border ${badge.metallic} flex items-center justify-between gap-3 transition-all duration-200 hover:-translate-y-0.5 shadow-sm`}
                       >
-                        <div
-                          className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${badge.glow}`}
-                        >
-                          <Icon className="w-5 h-5 stroke-[2.2]" />
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div
+                            className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border ${badge.glow}`}
+                          >
+                            <Icon className="w-4.5 h-4.5 stroke-[2.2]" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-xs font-bold text-white truncate leading-tight">
+                              {badge.title}
+                            </p>
+                            <p className="text-[10px] text-gym-text truncate mt-0.5">
+                              {badge.category}
+                            </p>
+                          </div>
                         </div>
-                        <div className="min-w-0">
-                          <p className="text-xs font-bold text-white truncate">
-                            {badge.title}
-                          </p>
-                          <p className="text-[10px] text-gym-text truncate">
-                            {badge.category}
-                          </p>
-                          <p className="text-[10px] font-mono font-bold text-gym-gold mt-0.5">
-                            {badge.xp}
-                          </p>
+
+                        {/* XP Pill Fiel ao App Real */}
+                        <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#FFD700]/15 border border-[#FFD700]/30 text-[10px] font-mono font-bold text-[#FFD700] shrink-0">
+                          <CheckCircle2 className="w-3 h-3 text-[#FFD700]" />
+                          <span>{badge.xp}</span>
                         </div>
                       </div>
                     );

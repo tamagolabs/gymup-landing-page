@@ -64,12 +64,12 @@ export function Hero() {
               className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10"
               id="download-cta"
             >
-              {/* Botão Android */}
+              {/* Botão Android (Ativo) */}
               <a
                 href={SITE_CONFIG.links.playStore}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm font-extrabold text-[#0B0E14] bg-gym-primary rounded-2xl shadow-[0_0_25px_rgba(0,230,118,0.45)] hover:shadow-[0_0_40px_rgba(0,230,118,0.7)] hover:bg-[#00f880] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm font-black text-[#0B0E14] bg-gym-primary rounded-2xl shadow-[0_0_25px_rgba(0,230,118,0.45)] hover:shadow-[0_0_40px_rgba(0,230,118,0.7)] hover:bg-[#00f880] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
               >
                 <Play className="w-5 h-5 fill-[#0B0E14] group-hover:scale-110 transition-transform" />
                 <div className="text-left leading-tight">
@@ -82,23 +82,23 @@ export function Hero() {
                 </div>
               </a>
 
-              {/* Botão iOS */}
-              <a
-                href={SITE_CONFIG.links.appStore}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm font-bold text-white bg-gym-card/90 border border-gym-border/90 rounded-2xl hover:bg-gym-surface hover:border-gym-primary/50 transition-all duration-200 backdrop-blur-md group hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <Apple className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+              {/* Botão iOS (Em Breve) */}
+              <div className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 text-sm font-medium text-gym-text/80 bg-gym-card/60 border border-gym-border/70 rounded-2xl backdrop-blur-md cursor-default select-none">
+                <Apple className="w-6 h-6 text-gym-text/60" />
                 <div className="text-left leading-tight">
-                  <span className="text-[10px] uppercase font-semibold text-gym-text tracking-wider block">
-                    Disponível na
+                  <span className="text-[10px] uppercase font-semibold text-gym-text/60 tracking-wider block">
+                    Apple iOS
                   </span>
-                  <span className="text-sm font-extrabold block">
-                    Baixar para iOS
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-sm font-bold text-white/80">
+                      App Store
+                    </span>
+                    <span className="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded-full bg-gym-surface text-gym-primary border border-gym-primary/30">
+                      Em breve
+                    </span>
+                  </div>
                 </div>
-              </a>
+              </div>
             </div>
 
             {/* Badges de Prova Social */}
