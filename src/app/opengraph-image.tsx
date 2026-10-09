@@ -50,7 +50,7 @@ export default function Image() {
           letterSpacing: "1px",
         }}
       >
-        ⚡ LOCAL-FIRST (SQLITE) • GOOGLE GEMINI 2.5 • 60 FPS
+        ⚡ LOCAL-FIRST (SQLITE) • GOOGLE GEMINI 3.8 • 60 FPS
       </div>
 
       {/* Logo / Brand */}

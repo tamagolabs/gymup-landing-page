@@ -26,7 +26,7 @@ export const FEATURES: Feature[] = [
     description:
       "A IA analisa sua frequência semanal, metas de hipertrofia e limitações reais (dores no ombro, joelho ou lombar) para prescrever a periodização biomecanicamente ideal para o seu corpo.",
     icon: "BrainCircuit",
-    badge: "Google Gemini 2.5",
+    badge: "Google Gemini 3.8",
     accent: "secondary",
   },
   {
