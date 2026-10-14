@@ -9,7 +9,6 @@ import {
   Database,
   Dumbbell,
   FileText,
-  ShieldCheck,
   Sparkles,
   TrendingUp,
   Vibrate,
@@ -203,7 +202,6 @@ export function Features() {
               instantaneamente em <strong>0ms</strong>, sem tela branca e sem
               perda de dados.
             </p>
-
           </motion.div>
 
           {/* ========================================================
