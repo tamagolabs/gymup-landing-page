@@ -3,10 +3,11 @@ export const SITE_CONFIG = {
   tagline: "Menos tela travada. Mais quilos na barra.",
   description:
     "O aplicativo de musculação definitivo: 100% offline (Local-First com SQLite), inteligente com Google Gemini e ultrarrápido em 60 FPS. Registre treinos em 0ms, evolua com Smart Overload e suba de nível de Iniciante do Ferro a Lenda do Aço.",
-  url: "https://gymup.app",
+  url: "https://gymup.tamagolabs.com.br",
   author: "GymUp Team",
   links: {
-    playStore: "https://play.google.com",
+    playStore:
+      "https://play.google.com/store/apps/details?id=br.com.tamagolabs.gymup",
   },
   stats: [
     {
